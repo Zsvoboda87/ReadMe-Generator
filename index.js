@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 const questions = () => {
     return inquirer.prompt([
@@ -130,17 +131,32 @@ const questions = () => {
     ]);
 };
 
-questions().then(readMeData =>{
-  console.log(readMeData)
-})
-;
 
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// TODO: Create a function to write README file
+const writeToFile = fileContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./dist/README.md', fileContent, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({
+        ok: true,
+        message: 'File created!'
+      });
+    });
+  });
+};
 
 // // TODO: Create a function to initialize app
 // function init() {}
 
 // // Function call to initialize app
 // init();
+questions()
+  .then(readMeData => {
+    return generateMarkdown(readMeData)
+  })
+  .then(returnData => {
+      writeToFile(returnData);
+  });
