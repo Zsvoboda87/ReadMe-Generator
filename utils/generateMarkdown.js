@@ -1,6 +1,6 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
+// TODO: Create a function that returns a license badge based on which license is passed in
 
-// const { Console } = require("console");
+const { Console } = require("console");
 
 // // If there is no license, return an empty string
 // function renderLicenseBadge(license) {}
@@ -9,10 +9,22 @@
 // // If there is no license, return an empty string
 // function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+
 const renderLicenseSection = (license) =>  {
- console.log(license)
+  switch (license) {
+    case 'MIT': console.log("MIT");
+      break;
+    case 'APACHE_2.0': console.log("Apache 2.0")
+      break;
+    case 'GPL_3.0': console.log("GPL_3.0")
+      break;
+    case 'BSD3': console.log("BSD3")
+      break;
+    case 'None': console.log("none")
+      break;  
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -22,7 +34,9 @@ module.exports = data => {
   
 # ${data.title}
 
+![badmath](https://img.shields.io/badge/License-${data.license}-<green>)
 ## Description 
+
 
 ${data.description}
 
