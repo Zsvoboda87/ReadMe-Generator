@@ -18,7 +18,11 @@ This project utilizes node.js to create readme files by prompting users for info
 
 ## Installation
 
-Install Node.js on your computer following the instructions here https://nodejs.org/en/download/.  Then copy the files to your computer.  Start the program using the command line in the root directory.  The starting command is node index.
+Install Node.js on your computer following the instructions here https://nodejs.org/en/download/.
+Run npm install in the command line.  
+Copy or clone the repo files to your computer.  
+Start the program using the command line in the root directory.  
+The starting command is node index.
 
 ## Usage 
 The repo is available to be utilized by anyone.
