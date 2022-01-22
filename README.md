@@ -18,7 +18,6 @@ This project utilizes node.js to create readme files by prompting users for info
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 Install Node.js on your computer following the instructions here https://nodejs.org/en/download/.  Then copy the files to your computer.  Start the program using the command line in the root directory.  The starting command is node index.
 
 ## Usage 
@@ -28,7 +27,7 @@ The repo is available to be utilized by anyone.
 Feel free to download or fork from the orginal and make your own changes.
 
 ## Tests
-There are no testing instructions for this app.
+Current there is no testing instructions for this app.
 
 ## Questions
 https://github.com/Zsvoboda87
